@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Srinandhini P — AI & ML Engineer</title>
+<meta name="description" content="Portfolio of Srinandhini P — AI & ML graduate building RAG pipelines, ML models, Flask apps and Tableau dashboards.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%230E1A2F'/><text x='50' y='68' font-size='52' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'>SP</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F5F7FA;--card:#fff;--ink:#0E1A2F;--muted:#586581;--line:#DCE3EE;--accent:#2456E5;--accent-soft:#E6ECFD;--gold:#F2A516;--navy:#0E1A2F;--r:14px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Bricolage Grotesque','Instrument Sans',sans-serif;line-height:1.1;letter-spacing:-.02em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+.sec-head{margin-bottom:36px;max-width:620px}
+.sec-head h2{font-size:clamp(28px,4vw,40px);margin-bottom:10px}
+.sec-head p{color:var(--muted)}
+
+/* nav */
+header{position:sticky;top:0;z-index:20;background:rgba(245,247,250,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:20px;text-decoration:none}
+.logo b{color:var(--accent)}
+nav ul{display:flex;gap:28px;list-style:none;align-items:center}
+nav ul a{text-decoration:none;font-size:15px;color:var(--muted);font-weight:500}
+nav ul a:hover{color:var(--ink)}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;border:1.5px solid var(--ink);transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.solid{background:var(--ink);color:#fff}
+.btn.solid:hover{background:var(--accent);border-color:var(--accent)}
+.btn.blue{background:var(--accent);border-color:var(--accent);color:#fff}
+nav .btn{padding:8px 18px;color:#fff !important}
+
+/* hero */
+.hero{padding:72px 0 88px}
+.hero-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:56px;align-items:center}
+.status{display:inline-flex;align-items:center;gap:10px;background:var(--accent-soft);color:var(--accent);padding:6px 14px;border-radius:999px;font-size:14px;font-weight:600;margin-bottom:24px}
+.status i{width:8px;height:8px;border-radius:50%;background:#1DB954;box-shadow:0 0 0 0 rgba(29,185,84,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 8px rgba(29,185,84,0)}100%{box-shadow:0 0 0 0 rgba(29,185,84,0)}}
+.hero h1{font-size:clamp(44px,7vw,80px);margin-bottom:22px}
+.hero .lead{font-size:19px;color:var(--muted);max-width:540px;margin-bottom:32px}
+.hero .lead b{color:var(--ink);font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero-card{background:var(--navy);color:#fff;border-radius:22px;padding:30px;position:relative;overflow:hidden}
+.hero-card::after{content:"";position:absolute;right:-60px;top:-60px;width:180px;height:180px;border-radius:50%;background:var(--accent);opacity:.35}
+.hero-card h3{font-size:15px;font-weight:500;color:#9FB0D0;margin-bottom:18px;position:relative;z-index:1}
+.fact{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-top:1px solid rgba(255,255,255,.12);position:relative;z-index:1}
+.fact span{color:#9FB0D0;font-size:14px}
+.fact b{font-weight:600;text-align:right;font-size:15px}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1.4fr;gap:56px}
+.about h2{font-size:clamp(28px,4vw,40px)}
+.about p{color:var(--muted);margin-bottom:16px;max-width:64ch}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}
+.skill{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.skill h3{font-size:17px;margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{background:var(--bg);border:1px solid var(--line);padding:5px 12px;border-radius:8px;font-size:14px;font-weight:500}
+.skill.new{border-color:var(--accent);background:var(--accent-soft)}
+.skill.new .chips span{background:#fff;border-color:#C5D3F8}
+
+/* tableau */
+.viz{background:var(--navy);color:#fff}
+.viz .sec-head p{color:#A9B7D3}
+.frame{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 30px 60px -20px rgba(0,0,0,.5)}
+.bar{display:flex;align-items:center;gap:8px;padding:12px 16px;background:#EEF1F6;border-bottom:1px solid var(--line)}
+.bar i{width:11px;height:11px;border-radius:50%;background:#C9D1DF}
+.bar span{margin-left:10px;font-size:13px;color:var(--muted)}
+.frame iframe{display:block;width:100%;height:760px;border:0;background:#fff}
+.viz-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;margin-top:24px}
+.viz-foot .chips span{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);color:#fff}
+.viz .btn{border-color:#fff;color:#fff}
+.viz .btn:hover{background:#fff;color:var(--navy)}
+
+/* projects */
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px;display:flex;flex-direction:column;transition:border-color .2s,box-shadow .2s}
+.card:hover{border-color:var(--accent);box-shadow:0 14px 34px -18px rgba(36,86,229,.45)}
+.card.wide{grid-column:1/-1}
+.card h3{font-size:22px;margin-bottom:14px}
+.card ul{list-style:none;color:var(--muted);margin-bottom:22px;font-size:15.5px}
+.card li{padding-left:20px;position:relative;margin-bottom:6px}
+.card li::before{content:"";position:absolute;left:0;top:11px;width:8px;height:2px;background:var(--accent)}
+.card .chips{margin-top:auto}
+.metric{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.metric b{font-family:'Bricolage Grotesque',sans-serif;font-size:30px;letter-spacing:-.02em}
+.metric small{color:var(--muted);font-size:13px;font-weight:500}
+.metric i{flex:1;height:6px;background:var(--line);border-radius:6px;position:relative;overflow:hidden}
+.metric i::after{content:"";position:absolute;inset:0;width:var(--w);background:linear-gradient(90deg,var(--accent),#5B8CFF);border-radius:6px}
+.badge{display:inline-block;background:#FFF3D6;color:#8A5A00;font-size:13px;font-weight:600;padding:4px 12px;border-radius:999px;margin-bottom:16px;align-self:flex-start}
+
+/* experience */
+.timeline{border-left:2px solid var(--line);margin-left:6px}
+.job{position:relative;padding:0 0 36px 32px}
+.job:last-child{padding-bottom:0}
+.job::before{content:"";position:absolute;left:-8px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.job h3{font-size:20px}
+.job .org{color:var(--accent);font-weight:600;margin:4px 0 8px}
+.job p{color:var(--muted);max-width:68ch}
+.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;margin-top:20px}
+.cert{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-weight:500;font-size:15px}
+.cert small{display:block;color:var(--muted);font-weight:400;font-size:13.5px}
+.sub{font-size:24px;margin:64px 0 4px}
+
+/* contact */
+.contact{background:var(--accent);color:#fff;text-align:center;border-radius:28px;padding:72px 24px}
+.contact h2{font-size:clamp(30px,5vw,52px);margin-bottom:14px}
+.contact p{max-width:520px;margin:0 auto 32px;color:#DCE6FF}
+.contact .btn{background:#fff;color:var(--accent);border-color:#fff}
+.contact .btn.ghost{background:transparent;color:#fff}
+footer{text-align:center;color:var(--muted);font-size:14px;padding:40px 24px}
+
+/* entrance */
+.hero .wrap>*{animation:rise .7s both}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}}
+@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important;scroll-behavior:auto !important}}
+
+@media(max-width:860px){
+ .hero-grid,.about,.projects{grid-template-columns:1fr}
+ .card.wide{grid-column:auto}
+ nav ul li:not(:last-child){display:none}
+ section{padding:64px 0}
+ .frame iframe{height:560px}
+}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+ <a class="logo" href="#top">Srinandhini<b>.P</b></a>
+ <ul>
+  <li><a href="#about">About</a></li>
+  <li><a href="#skills">Skills</a></li>
+  <li><a href="#dashboard">Dashboard</a></li>
+  <li><a href="#projects">Projects</a></li>
+  <li><a href="#experience">Experience</a></li>
+  <li><a class="btn solid" href="#contact">Contact</a></li>
+ </ul>
+</nav></div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap"><div class="hero-grid">
+ <div>
+  <div class="status"><i></i>Open to opportunities · Coimbatore</div>
+  <h1>Srinandhini P</h1>
+  <p class="lead">AI &amp; ML graduate who builds <b>working software</b>, not just notebooks: RAG pipelines, trained models, Flask apps with real UIs and <b>Tableau dashboards</b> that turn data into decisions.</p>
+  <div class="cta">
+   <a class="btn solid" href="#projects">See my work</a>
+   <a class="btn" href="#dashboard">View live dashboard</a>
+   <a class="btn" href="mailto:Srinandhinidrngp@gmail.com">Email me</a>
+  </div>
+ </div>
+ <aside class="hero-card" aria-label="Quick facts">
+  <h3>Quick facts</h3>
+  <div class="fact"><span>Location</span><b>Coimbatore, IN</b></div>
+  <div class="fact"><span>Degree</span><b>B.Sc. AI &amp; ML</b></div>
+  <div class="fact"><span>Focus</span><b>RAG · Flask · ML · BI</b></div>
+  <div class="fact"><span>Looking for</span><b>SDE / Data Analyst</b></div>
+  <div class="fact"><span>Status</span><b>Interviewing now</b></div>
+ </aside>
+</div></div></section>
+
+<section id="about" style="padding-top:0"><div class="wrap about">
+ <h2>From coursework to shipped features</h2>
+ <div>
+  <p>I'm a B.Sc. Artificial Intelligence &amp; Machine Learning graduate from Dr. N.G.P. Arts and Science College, Coimbatore. I build full-stack web applications with Flask, HTML, CSS and JavaScript, and add AI-powered features on top.</p>
+  <p>My work covers retrieval-augmented generation, LLM API integration and classical ML models that sit behind real user interfaces. I also build dashboards in Power BI and Tableau, so the numbers are easy for anyone to read. I connect frontends to REST APIs, handle loading and error states properly, and work through Git/GitHub pull requests.</p>
+  <p>Right now I'm extending this stack with React and looking for an entry-level software development or data analysis role in Coimbatore.</p>
+ </div>
+</div></section>
+
+<section id="skills" style="padding-top:0"><div class="wrap">
+ <div class="sec-head"><h2>The stack I build with</h2><p>Tools I use to take an idea from raw data to a working product.</p></div>
+ <div class="skills">
+  <div class="skill"><h3>Languages</h3><div class="chips"><span>Python</span><span>SQL</span></div></div>
+  <div class="skill"><h3>Machine learning</h3><div class="chips"><span>Scikit-learn</span><span>TensorFlow</span><span>Keras</span><span>XGBoost</span></div></div>
+  <div class="skill new"><h3>Data &amp; visualization</h3><div class="chips"><span>Tableau</span><span>Power BI</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span></div></div>
+  <div class="skill"><h3>Generative AI</h3><div class="chips"><span>LangChain</span><span>RAG</span><span>Gemini API</span><span>FAISS</span></div></div>
+  <div class="skill"><h3>Web</h3><div class="chips"><span>HTML/CSS</span><span>JavaScript</span><span>Flask</span><span>REST APIs</span></div></div>
+  <div class="skill"><h3>Tools &amp; databases</h3><div class="chips"><span>MySQL</span><span>Git</span><span>GitHub</span><span>Jupyter</span></div></div>
+ </div>
+</div></section>
+
+<section id="dashboard" class="viz"><div class="wrap">
+ <div class="sec-head"><h2>Live Tableau dashboard</h2><p>An interactive dashboard I published on Tableau Public. Hover, click and filter it right here.</p></div>
+ <div class="frame">
+  <div class="bar"><i></i><i></i><i></i><span>public.tableau.com · Srinandhini P</span></div>
+  <iframe title="Tableau dashboard by Srinandhini P" loading="lazy" src="https://public.tableau.com/views/Book1_17898276446140/Dashboard1?:language=en-US&:showVizHome=no&:embed=true&:display_count=n&:toolbar=yes"></iframe>
+ </div>
+ <div class="viz-foot">
+  <div class="chips"><span>Tableau Public</span><span>Data visualization</span><span>Interactive dashboard</span></div>
+  <a class="btn" href="https://public.tableau.com/app/profile/srinandhini.p/viz/Book1_17898276446140/Dashboard1" target="_blank" rel="noopener">Open full dashboard on Tableau</a>
+ </div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+ <div class="sec-head"><h2>Selected work</h2><p>Six projects across retrieval-augmented generation, applied ML, business intelligence and full-stack delivery.</p></div>
+ <div class="projects">
+  <article class="card wide">
+   <span class="badge">Featured · Generative AI</span>
+   <h3>Enterprise AI Knowledge Assistant</h3>
+   <ul><li>Document Q&amp;A system built on Retrieval-Augmented Generation (RAG)</li><li>Gemini API with vector search and semantic retrieval</li><li>Secure user authentication and document upload</li></ul>
+   <div class="chips"><span>Python</span><span>Flask</span><span>LangChain</span><span>Gemini API</span><span>FAISS</span></div>
+  </article>
+  <article class="card">
+   <span class="badge">Business intelligence</span>
+   <h3>Tableau Dashboard</h3>
+   <ul><li>Interactive dashboard published on Tableau Public</li><li>Turns raw data into clear, filterable visuals</li><li>Embedded live on this page</li></ul>
+   <div class="chips" style="margin-bottom:18px"><span>Tableau</span><span>Data visualization</span></div>
+   <a class="btn blue" href="#dashboard" style="align-self:flex-start">View live</a>
+  </article>
+  <article class="card">
+   <div class="metric"><b>96.4%</b><small>accuracy</small><i style="--w:96.4%"></i></div>
+   <h3>Lifestyle-Based Disease Risk Prediction</h3>
+   <ul><li>Predicts disease risk from patient health data</li><li>Compared Random Forest, Decision Tree and Logistic Regression</li><li>Random Forest selected after evaluation</li></ul>
+   <div class="chips"><span>Python</span><span>Scikit-learn</span></div>
+  </article>
+  <article class="card">
+   <div class="metric"><b>95.6%</b><small>accuracy</small><i style="--w:95.6%"></i></div>
+   <h3>Dynamic Pricing Prediction</h3>
+   <ul><li>Predictive pricing model built on historical sales data</li><li>Feature engineering with regression algorithms</li><li>Tuned to support business pricing decisions</li></ul>
+   <div class="chips"><span>Python</span><span>XGBoost</span><span>Pandas</span></div>
+  </article>
+  <article class="card">
+   <div class="metric"><b>92.3%</b><small>accuracy</small><i style="--w:92.3%"></i></div>
+   <h3>Recommendation System</h3>
+   <ul><li>Personalized recommendations through collaborative filtering</li><li>Processed user behaviour data for relevance</li><li>Similarity-based ranking to improve quality</li></ul>
+   <div class="chips"><span>Python</span><span>Scikit-learn</span></div>
+  </article>
+  <article class="card">
+   <div class="metric"><b>95.3%</b><small>accuracy</small><i style="--w:95.3%"></i></div>
+   <h3>AI Code Assistant</h3>
+   <ul><li>Flask app that generates, debugs and explains code via the Gemini API</li><li>Real-time single-page UI with a dark/light mode toggle</li><li>Supports 5+ languages: Python, Java, SQL, C++, JavaScript</li></ul>
+   <div class="chips"><span>Python</span><span>Flask</span><span>Gemini API</span></div>
+  </article>
+ </div>
+</div></section>
+
+<section id="experience" style="padding-top:0"><div class="wrap">
+ <div class="sec-head"><h2>Internships</h2><p>Hands-on experience across web development, Python automation and IT support.</p></div>
+ <div class="timeline">
+  <div class="job"><h3>Full Stack Development Intern</h3><div class="org">Magora Infotech</div><p>Developed responsive web applications using HTML, CSS, Python and Flask. Worked on frontend-backend integration and application debugging.</p></div>
+  <div class="job"><h3>Python Programming Intern</h3><div class="org">Lasak Technologies</div><p>Built Python applications and automated data processing tasks, applying core programming concepts, APIs and problem-solving techniques.</p></div>
+  <div class="job"><h3>IT Intern</h3><div class="org">KMCH</div><p>Assisted with system maintenance, software installation and technical support. Worked on database management and IT troubleshooting.</p></div>
+ </div>
+ <h2 class="sub">Certifications</h2>
+ <div class="certs">
+  <div class="cert">Python Spoken Tutorial<small>IIT Bombay</small></div>
+  <div class="cert">Python with AI<small>Nunnari Labs Private Limited</small></div>
+  <div class="cert">Introduction to Machine Learning<small>NPTEL</small></div>
+  <div class="cert">Introduction to Deep Learning<small>NPTEL</small></div>
+  <div class="cert">AI Tools Master<small>Freedom with AI</small></div>
+  <div class="cert">Workshop: IoT using Raspberry Pi<small>Hands-on workshop</small></div>
+ </div>
+</div></section>
+
+<section id="contact" style="padding-top:0"><div class="wrap"><div class="contact">
+ <h2>Let's work together</h2>
+ <p>I'm interviewing for entry-level software development and data analysis roles around Coimbatore. Reach out, I reply fast.</p>
+ <div class="cta" style="justify-content:center">
+  <a class="btn" href="mailto:Srinandhinidrngp@gmail.com">Srinandhinidrngp@gmail.com</a>
+  <a class="btn ghost" href="https://linkedin.com/in/srinandhinip" target="_blank" rel="noopener">LinkedIn</a>
+ </div>
+</div></div></section>
+</main>
+<footer>© 2026 Srinandhini P · Coimbatore, India</footer>
+</body>
+</html>
